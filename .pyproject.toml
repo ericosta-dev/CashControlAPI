@@ -1,0 +1,36 @@
+[tool.black]
+line-length = 120
+force-exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | migrations
+    | static
+  )/
+  | __init__.py
+)
+'''
+
+
+[tool.isort]
+profile="black"
+force_grid_wrap = 0
+include_trailing_comma = true
+line_length = 120
+multi_line_output = 3
+overwrite_in_place = true
+use_parentheses = true
+skip_glob = [
+	"*/migrations/*.py",
+	"*/static/*",
+	"__init__.py",
+]

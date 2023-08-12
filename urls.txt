@@ -1,0 +1,51 @@
+/admin/	django.contrib.admin.sites.index	admin:index
+/admin/<app_label>/	django.contrib.admin.sites.app_index	admin:app_list
+/admin/<url>	django.contrib.admin.sites.catch_all_view
+/admin/auth/group/	django.contrib.admin.options.changelist_view	admin:auth_group_changelist
+/admin/auth/group/<path:object_id>/	django.views.generic.base.RedirectView
+/admin/auth/group/<path:object_id>/change/	django.contrib.admin.options.change_view	admin:auth_group_change
+/admin/auth/group/<path:object_id>/delete/	django.contrib.admin.options.delete_view	admin:auth_group_delete
+/admin/auth/group/<path:object_id>/history/	django.contrib.admin.options.history_view	admin:auth_group_history
+/admin/auth/group/add/	django.contrib.admin.options.add_view	admin:auth_group_add
+/admin/auth/user/	django.contrib.admin.options.changelist_view	admin:auth_user_changelist
+/admin/auth/user/<id>/password/	django.contrib.auth.admin.user_change_password	admin:auth_user_password_change
+/admin/auth/user/<path:object_id>/	django.views.generic.base.RedirectView
+/admin/auth/user/<path:object_id>/change/	django.contrib.admin.options.change_view	admin:auth_user_change
+/admin/auth/user/<path:object_id>/delete/	django.contrib.admin.options.delete_view	admin:auth_user_delete
+/admin/auth/user/<path:object_id>/history/	django.contrib.admin.options.history_view	admin:auth_user_history
+/admin/auth/user/add/	django.contrib.auth.admin.add_view	admin:auth_user_add
+/admin/authtoken/tokenproxy/	django.contrib.admin.options.changelist_view	admin:authtoken_tokenproxy_changelist
+/admin/authtoken/tokenproxy/<path:object_id>/	django.views.generic.base.RedirectView
+/admin/authtoken/tokenproxy/<path:object_id>/change/	django.contrib.admin.options.change_view	admin:authtoken_tokenproxy_change
+/admin/authtoken/tokenproxy/<path:object_id>/delete/	django.contrib.admin.options.delete_view	admin:authtoken_tokenproxy_delete
+/admin/authtoken/tokenproxy/<path:object_id>/history/	django.contrib.admin.options.history_view	admin:authtoken_tokenproxy_history
+/admin/authtoken/tokenproxy/add/	django.contrib.admin.options.add_view	admin:authtoken_tokenproxy_add
+/admin/autocomplete/	django.contrib.admin.sites.autocomplete_view	admin:autocomplete
+/admin/jsi18n/	django.contrib.admin.sites.i18n_javascript	admin:jsi18n
+/admin/login/	django.contrib.admin.sites.login	admin:login
+/admin/logout/	django.contrib.admin.sites.logout	admin:logout
+/admin/password_change/	django.contrib.admin.sites.password_change	admin:password_change
+/admin/password_change/done/	django.contrib.admin.sites.password_change_done	admin:password_change_done
+/admin/r/<int:content_type_id>/<path:object_id>/	django.contrib.contenttypes.views.shortcut	admin:view_on_site
+/api/	rest_framework.routers.APIRootView	api-root
+/api/\.<format>/	rest_framework.routers.APIRootView	api-root
+/api/accounts/	apps.core.views.AccountViewSet	account-list
+/api/accounts/<int:pk>/balance/	apps.core.views.AccountViewSet	account-balance
+/api/accounts/<pk>/	apps.core.views.AccountViewSet	account-detail
+/api/accounts/<pk>/balance/	apps.core.views.AccountViewSet	account-balance
+/api/accounts/<pk>/balance\.<format>/	apps.core.views.AccountViewSet	account-balance
+/api/accounts/<pk>\.<format>/	apps.core.views.AccountViewSet	account-detail
+/api/accounts\.<format>/	apps.core.views.AccountViewSet	account-list
+/api/categories/	apps.core.views.CategoryViewSet	category-list
+/api/categories/<pk>/	apps.core.views.CategoryViewSet	category-detail
+/api/categories/<pk>\.<format>/	apps.core.views.CategoryViewSet	category-detail
+/api/categories\.<format>/	apps.core.views.CategoryViewSet	category-list
+/api/token/	rest_framework_simplejwt.views.TokenObtainPairView	token_obtain_pair
+/api/token/refresh/	rest_framework_simplejwt.views.TokenRefreshView	token_refresh
+/api/transactions/	apps.core.views.TransactionViewSet	transaction-list
+/api/transactions/<pk>/	apps.core.views.TransactionViewSet	transaction-detail
+/api/transactions/<pk>\.<format>/	apps.core.views.TransactionViewSet	transaction-detail
+/api/transactions/spent_by_category/	apps.core.views.TransactionViewSet	spent-by-category
+/api/transactions/spent_by_category/	apps.core.views.TransactionViewSet	transaction-spent-by-category
+/api/transactions/spent_by_category\.<format>/	apps.core.views.TransactionViewSet	transaction-spent-by-category
+/api/transactions\.<format>/	apps.core.views.TransactionViewSet	transaction-list
